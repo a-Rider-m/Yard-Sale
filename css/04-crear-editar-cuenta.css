@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --white: #ffffff;
+    --black: #000000;
+    --dark: #232830;
+    --very-light-pink: #c7c7c7;
+    --text-input-field: #f7f7f7;
+    --hospital-green: #acd9b2;
+    --sm: 1.4rem;
+    --md: 1.6rem;
+    --lg: 1.8rem;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.form-container {
+    width: 300px;
+    height: 100%;
+    text-align: start;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.form-container__title {
+    font-size: var(--lg);
+    margin-bottom: 36px;
+    text-align: start;
+}
+
+.form-container__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.form-container__form div {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container__label {
+    font-size: var(--sm);
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.form-container__input {
+    height: 30px;
+    background-color: var(--text-input-field);
+    border: none;
+    border-radius: 8px;
+    font-size: var(--md);
+    padding: 6px;
+    margin-bottom: 12px;
+}
+
+.form-container__input--name, 
+.form-container__input--email-address,
+.form-container__input--password {
+    margin-bottom: 22px;
+}
+
+.primary-button {
+    width: 300px;
+    background-color: var(--hospital-green);
+    border-radius: 8px;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+    height: 50px;
+    }
+
+.create-button {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 24px;
+}
+
+@media (min-width: 600px) {
+    .form-container{
+        width: 300px;
+        height: auto;
+    }
+
+    .form-container__form {
+        height: auto;
+        justify-content: baseline;
+    }
+
+    .create-button {
+        width: 100%;
+        position: static;
+        margin-top: 14px;
+        margin-bottom: 30px;
+    }
+}
